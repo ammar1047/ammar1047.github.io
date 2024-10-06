@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV Muhammad Ammar Fauzan, Junior Software Developer, experienced in JavaScript, Web Development, and modern frameworks.">
+    <meta name="keywords" content="Muhammad Ammar Fauzan, CV, Junior Software Developer, JavaScript, Web Developer">
     <title>CV Muhammad Ammar Fauzan</title>
     <link rel="stylesheet" href="CV.css">
     <style>
@@ -36,6 +38,16 @@
 
         .contact-info {
             margin-top: 10px;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
         h1 {
@@ -77,6 +89,23 @@
             padding: 8px;
             border-radius: 4px;
         }
+
+        /* Interactivity */
+        li:hover {
+            background-color: #d4d4d4;
+            transition: background-color 0.3s;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+        }
+
+        footer a {
+            color: #555;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -87,26 +116,15 @@
             <h1>Muhammad Ammar Fauzan</h1>
             <p class="title">Junior Software Developer</p>
             <div class="contact-info">
+                <p>Email: <a href="mailto:ammar@example.com">ammar@example.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/ammar-fauzan" target="_blank">linkedin.com/in/ammar-fauzan</a></p>
+                <p>GitHub: <a href="https://github.com/ammar-fauzan" target="_blank">github.com/ammar-fauzan</a></p>
             </div>
         </header>
 
         <section class="profile section">
             <h2>About Me</h2>
             <p>Saya seorang developer perangkat lunak junior yang antusias dengan teknologi terkini. Memiliki pengalaman dalam pengembangan aplikasi web menggunakan JavaScript dan framework modern. Saya berkomitmen untuk terus belajar dan memperluas keterampilan dalam dunia pemrograman, serta bekerja dalam tim untuk mengembangkan solusi yang efisien.</p>
-        </section>
-
-        <section class="experience section">
-            <h2>Work Experience</h2>
-            <div class="job">
-                <h3>Intern Developer - PT TechSol</h3>
-                <span class="date">2023</span>
-                <p>Berperan dalam pengembangan aplikasi internal menggunakan React.js dan Node.js. Bekerja sama dengan tim untuk memelihara dan meningkatkan performa aplikasi.</p>
-            </div>
-            <div class="job">
-                <h3>Freelance Web Developer</h3>
-                <span class="date">2022 - Present</span>
-                <p>Menangani berbagai proyek pengembangan website dan aplikasi sederhana untuk UMKM, mulai dari desain antarmuka hingga pengembangan backend menggunakan JavaScript dan MySQL.</p>
-            </div>
         </section>
 
         <section class="education section">
@@ -131,10 +149,33 @@
             <h2>Skills</h2>
             <ul>
                 <li>JavaScript, HTML, CSS</li>
+                <li>React.js, Node.js</li>
                 <li>Database Management (MySQL, MongoDB)</li>
-                <li>Git, GitHub</li>
+                <li>Git, GitHub, Agile Workflow</li>
             </ul>
         </section>
+
+        <section class="languages section">
+            <h2>Languages</h2>
+            <ul>
+                <li>Bahasa Indonesia (Native)</li>
+                <li>English (Intermediate)</li>
+            </ul>
+        </section>
+
+        <section class="hobbies section">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Membaca buku teknologi dan pengembangan perangkat lunak</li>
+                <li>Belajar bahasa pemrograman baru</li>
+                <li>Bersepeda</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Muhammad Ammar Fauzan</p>
+            <p>More Info: <a href="https://ammar-portfolio.com" target="_blank">ammar-portfolio.com</a></p>
+        </footer>
     </div>
 
 </body>

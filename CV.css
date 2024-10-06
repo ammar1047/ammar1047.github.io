@@ -5,6 +5,13 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframes for fadeIn effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 /* Container */
@@ -16,15 +23,42 @@ body {
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+/* Hover effect for container */
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Header */
 header {
     text-align: center;
-    background-color: #34495e;
+    background-color: #1abc9c;
     color: #fff;
     padding: 20px;
     border-radius: 10px 10px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Animation */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: skewX(-45deg);
+    animation: slide 2s infinite;
+}
+
+@keyframes slide {
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
 
 .profile-photo {
@@ -35,6 +69,13 @@ header {
     margin: 20px auto;
     border: 4px solid #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for profile photo */
+.profile-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -44,7 +85,7 @@ h1 {
 
 .title {
     font-size: 1.2em;
-    color: #bdc3c7;
+    color: #ecf0f1;
     margin-bottom: 10px;
 }
 
@@ -109,11 +150,23 @@ li {
     margin: 10px 0;
     padding: 10px;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards ease;
 }
 
+/* Fade-in animation for list items */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect for skills */
 li:hover {
-    background-color: #3498db;
+    background-color: #1abc9c;
     color: #fff;
 }
 
@@ -125,6 +178,21 @@ footer {
     background-color: #34495e;
     color: #fff;
     border-radius: 0 0 10px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Footer Animation */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: skewX(-45deg);
+    animation: slide 2s infinite;
 }
 
 /* Responsive Design */
